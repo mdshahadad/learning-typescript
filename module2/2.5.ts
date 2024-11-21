@@ -35,7 +35,7 @@
 
     const student1 = addCourseToStudent({ name: 'Shahadad', email: 'hello@shahadad.com', devType: 'NLWD' });
 
-    const student2 = addCourseToStudent({ name: 'Hossain', email: 'new@gmail.com', haveWatch: "Apple" });
+    const student2 = addCourseToStudent({ name: 'Hossain', email: 'new@gmail.com', hasWatch: "Apple" });
 
     console.log(student1)
 
