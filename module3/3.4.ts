@@ -35,15 +35,27 @@
         }
     };
 
+    // Handle in more smart way:
+
+    const isDog = (animal: Animal): animal is Dog => {
+        return animal instanceof Dog;
+    };
+
+    const isCat = (animal: Animal): animal is Cat => {
+        return animal instanceof Cat;
+    };
+
+
     const getAnimal = (animal: Animal) => {
-        if (animal instanceof Dog) {
+        if (isDog(animal)) {
             animal.makeBarking();
-        } else if (animal instanceof Cat) {
+        } else if (isCat(animal)) {
             animal.makeMeaw();
         } else {
             animal.makeSound()
         }
     }
+
 
     const dog = new Dog("Bideshi Dog", "Dog");
     const cat = new Cat("Bideshi cat", "cat");
